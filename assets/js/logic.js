@@ -1,6 +1,7 @@
 const themeButtonEl = $('#theme-btn');
 
 let isDark = true;
+$('body').css({ 'background-color': '#1a1a1a', color: '#d9e9e8' });
 
 themeButtonEl.on('click', function () {
   if (isDark) {
@@ -10,6 +11,7 @@ themeButtonEl.on('click', function () {
     $('body').css({ 'background-color': '#1a1a1a', color: '#d9e9e8' });
   }
   isDark = !isDark;
+  
 });
 
 //Changes title, then changes the background theme (not sure  where the  title is  being effected)
