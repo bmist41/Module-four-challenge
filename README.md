@@ -4,5 +4,5 @@ This repo contains:
     2. A blog post that pulls that info from local storage and posts it.
 
 
-![Form Screenshot](./assets/screenshots/form.png?raw=true "Form Screenshot")
-![Blog Screenshot](./assets/screenshots/blog.png?raw=true "Blog Screenshot")
+![Form Screenshot](Module-four-challenge/screenshots/form.png?raw=true "Form Screenshot")
+![Blog Screenshot](Module-four-challenge/screenshots/blog.png?raw=true "Blog Screenshot")
