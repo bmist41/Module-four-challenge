@@ -1,31 +1,34 @@
+const blogPostContent = document.getElementById("blogPostContent");
+
 function displayBlogPost() {
-    const blogPost = JSON.parse(localStorage.getItem('blogPost'));
-     if (blogPost !== null) {
-        const post = document.createDocumentpost();
+    const blogPostArray = JSON.parse(localStorage.getItem('blogPost'));
+    console.log(blogPostArray) 
+    if (blogPostArray !== null) {
+        for (let i = 0; i < blogPostArray.length; i++) {
+            const post = document.createElement('div');
 
-        const titleElement = document.createElement('h3');
-        titleElement.textContent = blogPost.title;
-        
-        const authorElement = document.createElement('p');
-        const strongElement = document.createElement('strong');
-        strongElement.textContent = `By: ${blogPost.username}`;
-        authorElement.appendChild(strongElement);
+            const titleEl = document.createElement('h3');
+            titleEl.textContent = blogPostArray[i].title;
+            
+            const usernameEl = document.createElement('p');
+            usernameEl.innerHTML = blogPostArray[i].username;
 
-   
-        const contentElement = document.createElement('div');
-        contentElement.innerHTML = blogPost.content;
-
-        post.appendChild(titleElement);
-        post.appendChild(authorElement);
-        post.appendChild(contentElement);
-
-        const blogPostContent = document.getElementById('blogPostContent');
-        blogPostContent.innerHTML = ""; 
-        blogPostContent.appendChild(post);
+            const contentEl = document.createElement('div');
+            contentEl.innerHTML = blogPostArray[i].content;
+    
+            post.appendChild(titleEl);
+            post.appendChild(usernameEl);
+            post.appendChild(contentEl);
+    
+            blogPostContent.appendChild(post);    
+        }
     } else {
-        $("#blogPostContent").html("<p>No blog post found in local storage.</p>");
+        $("#blogPostContent").html("<p> No blog post found in local storage.</p>");
     }
+}
 $(document).ready(function() {
     displayBlogPost();
 });
-}
+
+//Is this loop in the right place & is this just format? How do I post it? document.createElemente?
+//Need to debug why the post doesnt showup

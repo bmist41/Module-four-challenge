@@ -11,7 +11,9 @@ h2 {
 li {
   list-style: none;
   margin-top: 20px;
-  display: block;
+  display: flex;
+  text-align: left;
+  margin: 20px;
 }
 button {
   background-color: #000000;
@@ -32,7 +34,8 @@ button {
 }
 
 label {
-  color: #212121;
+  color: aquamarine;
+  margin: 10px;
 }
 
 select {

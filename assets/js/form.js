@@ -7,14 +7,14 @@ $(document).ready(function() {
     // Save form data to local storage on form submission
     $("#blogPost").submit(function(event) {
         event.preventDefault(); 
-        
+        const existingBlogPosts = JSON.parse(localStorage.getItem("blogPost")) || []
         const blogPost = {
-            name: $("#username").val(),
-            email: $("#title").val(),
-            age: $("#content").val()
+            username: $("#username").val(),
+            title: $("#title").val(),
+            content: $("#content").val()
         };
-         // Saves to local storage
-         localStorage.setItem("blogPost", JSON.stringify(blogPost));
+         existingBlogPosts.push(blogPost)
+         localStorage.setItem("blogPost", JSON.stringify(existingBlogPosts));
         
         alert("Your Form data has been saved in local storage! (I hope)");
     });

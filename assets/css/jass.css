@@ -411,6 +411,7 @@ dl {
 
 label {
   display: inline-block;
+  margin: 10px
 }
 
 input,
@@ -418,6 +419,7 @@ select,
 textarea,
 button {
   margin: 0;
+  width: auto;
 }
 
 a {
@@ -1123,6 +1125,7 @@ form .form-group {
 form .form-input,
 form .form-textarea {
   display: block;
+  width: auto;
 }
 
 form select {
@@ -1136,9 +1139,9 @@ form select {
 
 form label,
 form .form-label {
-  display: inline-block;
+  display: inline-flex;
   font-size: 1.2rem;
-  margin: 0.625rem 0 0.25rem 0.3rem;
+  margin: 10px;
 }
 
 form .form-input {
